@@ -7,7 +7,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".app.ui.FragmentNewReleases">
+        tools:context=".app.ui.FragmentNewReleases"
+        android:background="@color/black">
 
         <ProgressBar
             android:id="@+id/progressBarLoading"
@@ -22,8 +23,13 @@
 
         <TextView
             android:id="@+id/TitleNewReleases"
+            android:textAppearance="@style/TextAppearance.App.Title1.Bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space"
+            android:layout_marginTop="@dimen/space"
+            android:layout_marginEnd="@dimen/space"
+            android:text="@string/title_articles"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +38,9 @@
             android:id="@+id/rvNewReleases"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space"
+            android:layout_marginTop="@dimen/doubleSpace"
+            android:layout_marginEnd="@dimen/space"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

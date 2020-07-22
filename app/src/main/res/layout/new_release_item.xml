@@ -6,7 +6,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/threeSpace"
+        android:background="@color/black">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/articleImageCard"
@@ -15,7 +17,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="@dimen/pictureCornerRadius">
 
             <FrameLayout
                 android:layout_width="wrap_content"
@@ -23,39 +26,47 @@
 
                 <ImageView
                     android:id="@+id/articleImage"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="@dimen/pictureSize"
+                    android:layout_height="@dimen/pictureSize"
                     android:contentDescription="@string/app_name"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
                     android:id="@+id/articleSource"
+                    android:textAppearance="@style/TextAppearance.App.Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space"
+                    android:layout_marginTop="@dimen/space"
+                    android:layout_marginEnd="@dimen/space"
                     tools:text="Source" />
             </FrameLayout>
         </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/articleTitle"
+            android:textAppearance="@style/TextAppearance.App.Title2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="Title"
+            android:layout_marginTop="@dimen/halfSpace"
             android:maxLines="1"
             android:ellipsize="end"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/articleImageCard" />
+            app:layout_constraintTop_toBottomOf="@+id/articleImageCard"
+            tools:text="Title"/>
 
         <TextView
             android:id="@+id/articleDescription"
+            android:textAppearance="@style/TextAppearance.App.Title2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="Description"
+            android:layout_marginTop="@dimen/halfSpace"
             android:maxLines="2"
             android:ellipsize="end"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/articleTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/articleTitle"
+            tools:text="Description"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

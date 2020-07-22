@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="halfSpace">4dp</dimen>
+    <dimen name="space">8dp</dimen>
+    <dimen name="doubleSpace">16dp</dimen>
+    <dimen name="threeSpace">24dp</dimen>
+
+    <dimen name="pictureCornerRadius">10dp</dimen>
+    <dimen name="pictureSize">200dp</dimen>
+
+    <dimen name="mediumTextSize">18sp</dimen>
+    <dimen name="largeTextSize">22sp</dimen>
+</resources>

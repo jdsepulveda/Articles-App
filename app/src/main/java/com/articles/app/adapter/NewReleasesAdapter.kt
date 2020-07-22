@@ -26,14 +26,15 @@ class NewReleasesAdapter : RecyclerView.Adapter<NewReleasesVH>() {
         holder.bind(newReleasesList[position])
     }
 
-    fun populate(popularMovies: List<Article>) {
+    fun populate(newReleases: List<Article>) {
         newReleasesList.clear()
-        newReleasesList.addAll(popularMovies)
+        newReleasesList.addAll(newReleases)
         notifyDataSetChanged()
     }
 }
 
 class NewReleasesVH(private val binding: NewReleaseItemBinding): RecyclerView.ViewHolder(binding.root) {
+
     fun bind(article: Article) {
         binding.articleSource.text = article.source.name
         binding.articleTitle.text = article.title
