@@ -48,6 +48,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def coreKtxVersion = "1.3.0"
     def appCompatVersion = "1.1.0"
     def constraintLayoutVersion = "1.1.3"
