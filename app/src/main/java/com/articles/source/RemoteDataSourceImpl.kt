@@ -2,8 +2,9 @@ package com.articles.source
 
 import com.articles.remote.api.ArticlesService
 import com.articles.remote.model.ResponseWrapper
+import javax.inject.Inject
 
-class RemoteDataSourceImpl(
+class RemoteDataSourceImpl @Inject constructor(
     private val articlesService: ArticlesService
 ) : RemoteDataSource {
 
